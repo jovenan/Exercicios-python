@@ -2,9 +2,9 @@ print('Mercadinho!')
 gasto = 0
 produtos_mais_mil = 0
 mais_barato = ''
-prod_mais_barato = 0
+prod_mais_barato = ''
 n = 1
-while n != 99999:
+while n != 3:
     continuar = input('Deseja adicionar um produto? [Sim ou Nao]\n').upper()
     if continuar[:1] == 'N':
         break
