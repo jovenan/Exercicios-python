@@ -44,3 +44,28 @@ sorteia()
 print(numeros)
 print(somaPar(numeros))
 
+import datetime
+def voto(ano_nascimento):
+    tipo = ''
+    data = datetime.date.today()
+    idade = data.year - ano_nascimento
+    if idade < 16:
+        tipo = 'Nao Vota'
+    if idade > 15 and idade < 19:
+        tipo = 'Nao obrigatorio'
+    if idade > 18 and idade < 60:
+        tipo = 'Obrigadorio'
+    if idade > 59:
+        tipo = 'Nao obrigatorio'
+    return tipo
+
+print(voto(int(input('Digite seu ano de nascimento'))))
+
+def fatorial(num):
+    i = num
+    while i > 1:
+        i -= 1
+        num = num * i
+    return num
+
+
