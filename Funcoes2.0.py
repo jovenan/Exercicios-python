@@ -59,7 +59,7 @@ def voto(ano_nascimento):
         tipo = 'Nao obrigatorio'
     return tipo
 
-print(voto(int(input('Digite seu ano de nascimento'))))
+#print(voto(int(input('Digite seu ano de nascimento'))))
 
 def fatorial(num):
     i = num
@@ -68,4 +68,47 @@ def fatorial(num):
         num = num * i
     return num
 
+
+def ficha(nome='desconhecido',gols=0):
+    try:
+        int(gols)
+    except:
+        gols = 0
+    if nome == '':
+        nome = 'Desconhecido'
+    print(f'O jogador {nome} fez {gols} gols.')
+
+#ficha(input('Digite o nome:'),input('Digite quantos gols:'))
+
+
+def leiaInt(num):
+    while True:
+        try:
+            int(num)
+            break
+        except:
+            print('Digite um numero valido!')
+            num = (input('numero: '))
+    print('Voce digitou {}'.format(num))    
+
+#leiaInt(input('Numero: '))
+
+def notas(*nota, sit=False):
+    lista = nota
+    turma = {}
+    turma['total'] = len(lista)
+    turma['maior'] = max(lista)
+    turma['menor'] = min(lista)
+    turma['media'] = sum(lista) / len(lista)
+    if sit == True:
+        if turma['media'] <= 5:
+            turma['situacao'] = 'Ruim'
+        elif turma['media'] > 5 and turma['media'] < 8:
+            turma['situacao'] = 'Intermediario'
+        else:
+            turma['situacao'] = 'Bom'
+    return turma
+
+n = notas(4,5,8,2,3)
+print(n)
 
