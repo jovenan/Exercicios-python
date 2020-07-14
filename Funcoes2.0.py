@@ -111,4 +111,15 @@ def notas(*nota, sit=False):
 
 n = notas(4,5,8,2,3)
 print(n)
+'''
+import urllib
+import urllib.request
+
+try:
+    site = urllib.request.urlopen('http://pudim.com.br/'
+except urllib.error.urlopen:
+    print('O site Pudim nao esta acessivel no momento')
+else:
+    print('Consegui acessar o site')
+'''
 
