@@ -8,7 +8,7 @@ print("Digite o valor de c")
 c = int(input())
 vldelta = ((b*b)-(4*a*c))
 if (vldelta < 0):
-	print("o valor de delta nao é real")
+	print("esta equação não possui raízes reais")
 else:
 	rx1 = ((-b + (vldelta **(1/2)))/(2*a))
 	rx2 = ((-b - (vldelta **(1/2)))/(2*a))
